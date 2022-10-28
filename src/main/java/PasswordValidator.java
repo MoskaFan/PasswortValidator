@@ -15,4 +15,23 @@ public static boolean checkPasswordLength(String password){
         }
         return false;
     }
+
+    public static boolean checkPasswordContainsLowerCaseCharacters(String password) {
+        for(int i = 0; i < password.length();i++){
+            if(Character.isLowerCase(password.charAt(i))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean checkPasswordContainsUpperCaseCharacters(String password) {
+
+        for(int i = 0; i < password.length();i++){
+            if(Character.isUpperCase(password.charAt(i))){
+                return true;
+            }
+        }
+        return false;
+    }
 }

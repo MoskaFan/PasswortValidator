@@ -25,9 +25,31 @@ class PasswordValidatorTest {
         boolean actual = PasswordValidator.checkPasswordContainsNumbers(password);
 
         //THEN
+        assertTrue(actual); }
+@Test
+        void when_Password_contains_lowercase_characters(){
+
+            //GIVEN
+            String password = "MEZwRn89AC87afxvf7RqN";
+
+            //WHEN
+            boolean actual = PasswordValidator.checkPasswordContainsLowerCaseCharacters(password);
+
+            //THEN
+            assertTrue(actual);
+
+    }
+    @Test
+    void when_Password_contains_uppercase_characters(){
+
+        //GIVEN
+        String password = "MEZwRn89AC87afxvf7RqN";
+
+        //WHEN
+        boolean actual = PasswordValidator.checkPasswordContainsUpperCaseCharacters(password);
+
+        //THEN
         assertTrue(actual);
-
-
 
     }
 }
