@@ -30,7 +30,7 @@ class PasswordValidatorTest {
         void when_Password_contains_lowercase_characters(){
 
             //GIVEN
-            String password = "MEZwRn89AC87afxvf7RqN";
+            String password = "MEZWRN89AC87üABTZ7RQN";
 
             //WHEN
             boolean actual = PasswordValidator.checkPasswordContainsLowerCaseCharacters(password);
@@ -51,5 +51,16 @@ class PasswordValidatorTest {
         //THEN
         assertTrue(actual);
 
+    }
+    @Test
+    void when_password_is_bad(){
+        //GIVEN
+        String password = "MEZwRn89AC87afxvf7RqN";
+
+        //WHEN
+        boolean actual = PasswordValidator.check_if_password_good(password);
+
+        //THEN
+        assertTrue(actual);
     }
 }
