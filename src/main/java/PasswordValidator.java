@@ -40,6 +40,18 @@ public class PasswordValidator {
         return false;
     }
 
+    public static boolean check_if_password_good (String password) {
+        List<String> tabuWords = new ArrayList<>();
+        Collections.addAll(tabuWords, "123456", "123456789", "12345678", "password", "1234567", "123123", "1234567890", "111111", "abc123", "00000", "123456", "123456789", "12345", "qwerty", "password", "12345678", "111111", "123123", "1234567890", "1234567", "qwerty123", "000000", "1q2w3e", "aa12345678", "abc123", "password1", "1234", "qwertyuiop", "123321", "password123");
+        for (String word : tabuWords) {
+            if (password.equals(word)) {
+                System.out.println("Bad password");
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static boolean containsLowerCaseWithAscii(String password) {
         char[] passwordArray = password.toCharArray();
         for (char letter : passwordArray) {
